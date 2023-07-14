@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:study_flutter_11_codingchef01_firebase/Layout.dart';
+import 'package:study_flutter_11_codingchef01_firebase/color_schemes.g.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -20,8 +21,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        useMaterial3: true,
+        colorScheme: lightColorScheme,
+        //colorScheme: darkColorScheme,
       ),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        colorScheme: darkColorScheme,
+        //colorScheme: darkColorScheme,
+      ),
+      themeMode: ThemeMode.system,
       home: const Layout(),
     );
   }
