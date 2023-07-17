@@ -17,6 +17,27 @@ class Layout extends StatelessWidget {
           child: SignIn(),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+      bottomNavigationBar: NavigationBar(
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.explore),
+            label: 'Explore',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.commute),
+            label: 'Commute',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.bookmark),
+            label: 'Bookmark',
+          ),
+        ],
+      ),
     );
   }
 }
